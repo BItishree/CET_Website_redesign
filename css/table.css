@@ -1,0 +1,23 @@
+
+.thstyle {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #17082d;
+    border: 1px solid rgb(14, 7, 58);
+    color: white;
+  }
+
+ .tdborderBtm {
+   text-align: left;
+   padding: 10px;
+   color: grey;
+   border: 1px solid rgb(14, 7, 58);
+  }
+
+  table, th, td {
+    border-collapse: collapse;
+  }
+
+  .__cf_email__{
+    
+  }
