@@ -9,50 +9,20 @@
 
 
     <style>
-        .spinner {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-
-  position: absolute;
-top: 48%;
-left: 48%;
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
+       .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('images/Preload.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
 }
-
-@-webkit-keyframes sk-rotateplane {
-  0% { -webkit-transform: perspective(120px) }
-  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
-}
-
-@keyframes sk-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-  } 50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-  } 100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
-}
-.spinner-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #296335;
-z-index: 999999;
-}
+        </style>
 
 
-
-    </style>
-
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
     <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
@@ -62,10 +32,17 @@ z-index: 999999;
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all' />
 
+
+
+
+
+
 </head>
 
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
-    <div class="kingster-mobile-header-wrap">
+
+
+<div class="kingster-mobile-header-wrap">
         <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation " id="kingster-mobile-header">
             <div class="kingster-mobile-header-container kingster-container clearfix">
                 <div class="kingster-logo  kingster-item-pdlr">
@@ -1506,17 +1483,6 @@ z-index: 999999;
 
 
 
-    <div class="preloader">
-  <div class="lines">
-    <div class="line line-1"></div>
-    <div class="line line-2"></div>
-    <div class="line line-3"></div>
-  </div>
-
-  <div class="loading-text">LOADING</div>
-</div>
-
-
 
 
 
@@ -1814,33 +1780,40 @@ z-index: 999999;
     </script>
 
 
-<script>
-jQuery(document).ready(
-function ($)
-{
+
+  <script type="text/javascript">
+jQuery(window).load(function($) {
 setTimeout(function(){
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = $('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
-}
-
-hidePreloader();
-
- }, 3000);
-
+    jQuery(".loader").fadeOut("slow");
+    }, 5000);
 });
 </script>
+
+<!--<script>-->
+<!--jQuery(document).ready(-->
+<!--function ($)-->
+<!--{-->
+<!--setTimeout(function(){-->
+<!--preloaderFadeOutTime = 500;-->
+<!--function hidePreloader() {-->
+<!--var preloader = $('.preloader');-->
+<!--preloader.fadeOut(preloaderFadeOutTime);-->
+<!--}-->
+
+<!--hidePreloader();-->
+
+<!-- }, 5000);-->
+
+<!--});-->
+<!--</script>-->
+
 
 
 
 
 </body>
-<!--CSS Spinner-->
-<div class="spinner-wrapper">
-<div class="spinner"></div>
-</div>
-
+  <!--CSS Spinner-->
+<div class="loader"></div>
 
 
 </html>
