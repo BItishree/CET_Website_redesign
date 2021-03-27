@@ -1781,12 +1781,34 @@
 
 
 
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
 jQuery(window).load(function($) {
 setTimeout(function(){
     jQuery(".loader").fadeOut("slow");
     }, 5000);
 });
+</script> -->
+	
+ <script type="text/javascript">
+
+    var imgs = document.images,
+    len = imgs.length,
+    counter = 0;
+
+    [].forEach.call( imgs, function( img ) {
+        if(img.complete)
+        incrementCounter();
+        else
+        img.addEventListener( 'load', incrementCounter, false );
+    } );
+
+    function incrementCounter() {
+        counter++;
+        if ( counter === len ) {
+            console.log( 'All images loaded!' );
+            $(".loader").fadeOut(2000);
+        }
+    }
 </script>
 
 <!--<script>-->
