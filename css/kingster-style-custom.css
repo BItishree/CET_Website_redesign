@@ -973,21 +973,8 @@ body .gdlr-core-flipbox-item .gdlr-core-flipbox-item-image {
 
   table, th, td {
     border-collapse: collapse;
+    background-color: #fff;
   }
-
-  .__cf_email__{
-
-  }
-
-
-
-
-
-
-
-
-
-
 
   .autonomous-tiles{
     display: grid;
