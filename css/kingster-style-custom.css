@@ -1015,15 +1015,14 @@ body .gdlr-core-flipbox-item .gdlr-core-flipbox-item-image {
     display: grid;
     grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
     grid-template-rows: 15vw 15vw 15vw;
-    gap: 2vw 1vh;
+    gap: 2vh 2vh;
     justify-content: center;
   }
 
   .club-custom-tile{
     
     box-shadow: 3px 6px 6px ;
-    padding: 0px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 0.5em;
     text-align: center;
     background-size: cover;
@@ -1052,8 +1051,17 @@ body .gdlr-core-flipbox-item .gdlr-core-flipbox-item-image {
         display: grid;
         grid-template-columns: 33vw 33vw 33vw;
         grid-template-rows: 33vw 33vw 33vw 33vw 33vw 33vw;
-
+        gap: 1vh 1vh;
         justify-content: center;
+    }
+    .club-custom-tile{
+    
+        box-shadow: 3px 6px 6px ;
+        padding: 0px;
+        margin: 20px;
+        border-radius: 0.5em;
+        text-align: center;
+        background-size: cover;
     }
 
   }
@@ -1064,7 +1072,7 @@ body .gdlr-core-flipbox-item .gdlr-core-flipbox-item-image {
         display: grid;
         grid-template-columns: 50vw 50vw;
         grid-template-rows: 50vw 50vw 50vw 50vw 50vw 50vw 50vw 50vw 50vw;
-
+        gap: 1vh 1vh;
         justify-content: center;
     }
 
